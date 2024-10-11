@@ -1,0 +1,58 @@
+ body: Container(
+          child: Column(
+            children: [
+             caritems(),
+              Expanded(
+                flex: 4,
+                child: Container(
+                  color: Colors.black,
+                  child: ListView.builder(itemBuilder: (context, index) =>
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ListTile(
+                          leading: CircleAvatar(
+                            backgroundColor: Colors.green,
+                          ),
+                          title: Text('Name'),
+                          subtitle: Text('Mobile NO'),
+                          trailing: Icon(Icons.delete),
+                        ),
+                      )
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: Container(
+                  height: 100,
+                  color: Colors.green,
+                ),
+              )
+            ],
+          ),
+        )
+    );
+  }
+}
+ class caritems extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+        flex: 2,
+        child: Container(
+          color: Colors.yellow,
+          child: ListView.builder(itemBuilder: (context,index)=>Padding(
+            padding:const EdgeInsets.all(11.0),
+            child: SizedBox(
+              width: 100,
+              child: CircleAvatar(
+                backgroundColor: Colors.green,
+              ),
+            ),
+          )
+          ),
+        ),
+      );
+  }
+
+ }
